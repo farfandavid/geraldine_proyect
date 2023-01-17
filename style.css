@@ -93,6 +93,8 @@
 
 .marco {
   width: 80%;
+  position: relative;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -112,6 +114,8 @@
 .pic-clip {
   clip-path: circle(50%);
   height: 80%;
+  position: relative;
+  z-index: -1;
 }
 
 .nombre {
