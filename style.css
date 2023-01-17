@@ -1,11 +1,11 @@
 @font-face {
   font-family: fuente-gd;
-  src: url(/font/fuente-gd.woff2);
+  src: url(./font/fuente-gd.woff2);
 }
 
 @font-face {
   font-family: fuente-gd-2;
-  src: url(/font/fuente-gd-2.woff2);
+  src: url(./font/fuente-gd-2.woff2);
 }
 
 * {
