@@ -11,9 +11,6 @@
 
 <body class="cuerpo">
     <nav class="logonav txt-upp">
-        <div class="w-90">
-
-        </div>
         <div class="logo-bg">
             <img src="./images/logo_white.webp" />
         </div>
@@ -21,24 +18,26 @@
     <main class="main-profile">
         <img class="marco rotar-180" src="./images/asset-top.svg" alt="" />
         <div class="pic-info">
-            <p class="txt-s42 font-cursive txt-black">geraldine</p>
-            <div class="c-block txt-upp">
+            <p class="ocultar-m768 txt-s42 font-cursive txt-black">geraldine</p>
+            <div class="c-block">
                 <img class="pic-clip" src="./images/pic_profile_cut.jpg" alt="" />
-                <figcaption class="space-blt-5 txt-black txt-s18">Artista Salteña</figcaption>
+                <p class="ocultar-M768 txt-s18 font-cursive txt-black">geraldine burgos</p>
+                <figcaption class="space-blt-5 txt-black txt-s18 txt-upp">Artista Salteña</figcaption>
             </div>
 
-            <p class="txt-s42 font-cursive txt-black">burgos</p>
+            <p class="ocultar-m768 txt-s42 font-cursive txt-black">burgos</p>
         </div>
         <img class="marco" src="./images/asset-top.svg" alt="" />
     </main>
     <div class="h-3000">
         <nav class="sticknav txt-upp">
-            <a class="active" href="#home">servicios</a>
-            <a href="#news">portfolio</a>
-            <a href="#contact">blog</a>
-            <a href="#about">preguntas frecuentes</a>
-            <a href="#about">sobre mi</a>
-            <a href="#about">contacto</a>
+            <a id="btn-menu" class="btn-menu ocultar-M768">Menu</a>
+            <a name="menu" class="link active" href="#home">servicios</a>
+            <a name="menu" class="link active" href="#news">portfolio</a>
+            <a name="menu" class="link active" href="#contact">blog</a>
+            <a name="menu" class="link active" href="#about">preguntas frecuentes</a>
+            <a name="menu" class="link active" href="#about">sobre mi</a>
+            <a name="menu" class="link active" href="#about">contacto</a>
             <div>
 
             </div>
@@ -193,7 +192,17 @@
         </section>
     </div>
 
+    <script>
+        let menuIcon = document.getElementById('btn-menu');
+        let botones = document.getElementsByName('menu')
 
+        menuIcon.addEventListener('click', () => {
+            botones.forEach((btn) => {
+                btn.classList.toggle('show-menu');
+            })
+            //botones.classList.add('show-menu');
+        });
+    </script>
 </body>
 
 </html>

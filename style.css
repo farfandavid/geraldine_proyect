@@ -15,56 +15,30 @@
 }
 
 .cuerpo {
-  background-color: #E4D8D3;
-  padding-top: 60px;
+  /* background-image: radial-gradient(circle at center, #E4D8D3 0, black 200%);
+  padding-top: 60px; */
+  background: radial-gradient(circle at center, #E4D8D3 0%, #f5ded5 50%, #eecfc1 100%);
+  background-attachment: fixed;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
   /* Add this */
 }
 
 /* Add a black background color to the top navigation */
 .logonav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   height: 60px;
   position: fixed;
   /* Add this */
-  width: 100%;
+  width: 100vw;
   /* Add this */
   top: 0;
   z-index: 4;
+  pointer-events: none;
   /* Add this */
-}
-
-/* Style the links inside the navigation bar */
-.logonav a {
-  float: left;
-  text-align: center;
-  padding: 7px 17px;
-  text-decoration: none;
-  height: 25px;
-}
-
-/* Change the color of links on hover */
-.logonav a:hover {
-  background-color: #e9b49e;
-  color: white;
-}
-
-/* Add a color to the active/current link */
-/* .topnav a.active {
-  background-color: #e9b49e;
-  color: white;
-} */
-
-/* Right-aligned section inside the top navigation */
-.logonav-right {
-  float: right;
-}
-
-/* Add a border between links */
-.logonav a+a {
-  border-left: 1px solid #C6A6A5;
-  border-right: 1px solid #C6A6A5;
 }
 
 .txt-upp {
@@ -82,6 +56,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 30px;
 }
 
 .logo-bg>img {
@@ -91,7 +66,7 @@
 }
 
 .w-90 {
-  width: 90%;
+  width: 70%;
 }
 
 .marco {
@@ -166,13 +141,77 @@
 }
 
 /* Responsive navigation menu - display links on top of each other */
-@media (max-width: 600px) {
-
-  .logonav a,
-  .logonav-right {
-    float: none;
-    display: block;
+@media screen and (max-width: 1050px) {
+  .ocultar-m768 {
+    display: none;
   }
+
+  .sticknav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: radial-gradient(circle at center, #e4d8d3 0%, #f5ded5 50%, #eecfc1 100%);
+    background-attachment: fixed;
+    background-position: center center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sticknav a {
+    float: left;
+    text-align: center;
+    padding: 7px 17px;
+    text-decoration: none;
+    height: 25px;
+  }
+
+  .link {
+    display: none;
+    border-bottom: 1px solid #9e83828c;
+  }
+
+  .btn-menu {
+    width: 100%;
+    border-bottom: 1px solid #9e83828c;
+  }
+
+  .show-menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: radial-gradient(circle at center, #e4d8d3 0%, #f5ded5 50%, #eecfc1 100%);
+    background-attachment: fixed;
+    background-position: center center;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .ocultar-M768 {
+    /* Estilos para pantallas mayores a 768px */
+    display: none;
+  }
+
+  .sticknav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #9e83828c;
+    background: radial-gradient(circle at center, #e4d8d3ec 0%, #f5ded5ef 50%, #eecfc1f1 100%);
+    background-attachment: fixed;
+    background-position: center center;
+
+  }
+
+  .sticknav a {
+    float: left;
+    text-align: center;
+    padding: 7px 17px;
+    text-decoration: none;
+    height: 25px;
+    border-left: 1px solid #C6A6A5;
+    border-right: 1px solid #C6A6A5;
+  }
+
 }
 
 .h-3000 {
@@ -185,35 +224,28 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 95vh;
 }
 
 .sticknav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   height: 60px;
   position: sticky;
   /* Add this */
   width: 100%;
   /* Add this */
   top: 0;
-  background-color: #E4D8D3f0;
+  padding: 0;
+  margin: 0;
   z-index: 3;
+
   /* Add this */
 }
 
 /* Style the links inside the navigation bar */
-.sticknav a {
-  float: left;
-  text-align: center;
-  padding: 7px 17px;
-  text-decoration: none;
-  height: 25px;
-  border-left: 1px solid #C6A6A5;
-  border-right: 1px solid #C6A6A5;
-}
+
 
 /* Change the color of links on hover */
 .sticknav a:hover {
@@ -335,4 +367,10 @@
 .div-card {
   width: 20%;
   border-bottom: 2px solid black;
+}
+
+
+
+.menu-icon {
+  display: none;
 }
