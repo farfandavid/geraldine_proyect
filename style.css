@@ -223,6 +223,10 @@
   .pic-side {
     display: none;
   }
+
+  .pic-clip {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1050px) {
